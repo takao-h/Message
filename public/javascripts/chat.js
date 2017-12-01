@@ -59,7 +59,7 @@ $(function() {
 	})
 
 	// 送信 クリックイベント
-	$('#send').click(function(){
+	$('#send').on('click',function(){
 	    var user = $('#user').val()
 	    var text = $('#speech').val()
 
@@ -71,7 +71,7 @@ $(function() {
 	})
 
 	// 退出 クリックイベント
-	$('#leave').click(function(){
+	$('#leave').on('click', function(){
 		webSocket.close()
 		webSocket = null
 	})
